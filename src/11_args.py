@@ -18,8 +18,7 @@ print(f1(1, 2))
 # YOUR CODE HERE
 
 def f2(*args):
-    num = [x for x in args]
-    return sum(num)
+    return sum(args)
 
 print(f2(1))                    # Should print 1
 print(f2(1, 3))                 # Should print 4
@@ -54,7 +53,8 @@ print(f3(8))     # Should print 9
 
 # YOUR CODE HERE
 
-# TODO: Make def f4 function
+def f4(**kwargs):
+    print (str(kwargs))
 
 # Should print
 # key: a, value: 12
@@ -73,4 +73,4 @@ d = {
 }
 
 # How do you have to modify the f4 call below to make this work?
-f4(d)
+f4(**d)
