@@ -42,4 +42,4 @@ elif len(sys.argv) == 2:
 elif len(sys.argv) == 3:
     print(calendar.TextCalendar(firstweekday=6).formatmonth(int(sys.argv[2]), int(sys.argv[1])))
 else:
-    print("Invalid arguments. Your script should look like: python3 14_cal.py <monthNumber> <year>.\n\nExample: python3 14_cal.py 3 2020\n");
+    print("Invalid arguments. Your script should look like: python3 14_cal.py <monthNumber> <year>.\n\nExample: python3 14_cal.py 3 2020\n")
