@@ -41,6 +41,6 @@ At first I was trying to return the int of num: int(num) for num ...
 But, because it is a string, it was failing on the if statement
 So I made int(num) % 2 .... and then just returned the num and the check passed
 """
-y = [num for num in x if int(num) % 2 == 0]
+y = [int(num) for num in x if int(num) % 2 == 0]
 
 print(y)
