@@ -36,6 +36,20 @@ print("Distance is: {:.2f}".format(dist(a, b)))
 
 # YOUR CODE HERE
 
+def print_tuple(number_set):
+    """
+    Since a regular int is not able to be iterated over, we need to check the type
+    If the type is an int, just print out the number
+    """
+
+    if type(number_set) is tuple:
+        for num in number_set:
+            print(num)
+    elif type(number_set) is int: 
+        print(number_set)
+    else:
+        print("I have no idea what you're trying to do.")
+
 t = (1, 2, 5, 7, 99)
 print_tuple(t)  # Prints 1 2 5 7 99, one per line
 

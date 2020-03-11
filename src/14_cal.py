@@ -30,3 +30,16 @@ it should use today’s date to get the month and year.
 import sys
 import calendar
 from datetime import datetime
+
+# Grabs currentDate that allows us to grab the year and the month of today's date
+currentDate = datetime.now()
+
+# Prints a text based calender based upon the date the program is ran
+if len(sys.argv) == 1:
+    print(calendar.TextCalendar(firstweekday=6).formatmonth(currentDate.year, currentDate.month))
+elif len(sys.argv) == 2:
+    print(calendar.TextCalendar(firstweekday=6).formatmonth(currentDate.year, int(sys.argv[1])))
+elif len(sys.argv) == 3:
+    print(calendar.TextCalendar(firstweekday=6).formatmonth(int(sys.argv[2]), int(sys.argv[1])))
+else:
+    print("Invalid arguments. Your script should look like: python3 14_cal.py <monthNumber> <year>.\n\nExample: python3 14_cal.py 3 2020\n")
